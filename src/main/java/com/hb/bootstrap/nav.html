@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nav</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="nav.css">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<!--navbar-default====>navbar-inverse-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <!--container可以放在nav外面-->
+    <div class="container">
+
+        <div class="navbar-header"><!--标记为头部-->
+
+            <!--设置具有收缩功能，收缩id为res-nav的东西,要使用网络bootstrap-->
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#res-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">acfun</a>
+
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="res-nav">
+            <!--ul>li*3>a-->
+            <ul class="nav navbar-nav">
+                <!--active被激活状态-->
+                <li class="active"><a href="#">视频</a></li>
+                <li><a href="#">课程</a></li>
+                <li><a href="#">下载</a></li>
+            </ul>
+            <form action="" class="navbar-form navbar-left">
+                <input type="text" placeholder="输入搜索内容" class="form-control">
+                <button type="submit">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </form>
+            <a href="#" class="btn navbar-btn btn-primary btn-sm navbar-right">报名课程</a>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">注册</a></li>
+                    <li><a href="#">登录</a></li>
+                </ul>
+                <p class="navbar-text">你好，<a class="navbar-link">hb</a></p>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--内容部分==================================================-->
+<div class="container" style="margin-top:70px">
+    <div class="alert alert-info">
+        <p>
+            为啥要入常？还不是为了那个一票否决权。问题是之所以现在的五大流氓是五常，是因为他们随便一个出来，不说没有办不成的事，起码蓝
+            星上的事他们无论哪个不答应都能搅和黄了……大伙先打嘴炮把事情商量好再办，省得办事到一半有大佬跳出来搅和——费时费力不说，万一把谁惹急眼了掀桌子怎么办？五常离了联合国还是五大流氓，联合国离了五常就是个笑话。没有掀桌子的本事，也配入常？印度想入常，先埋头练功五十年，再挨个儿和大流氓们搭搭手，还得把太阳种出来。这么一想共和国真是开挂一样……
+
+            作者：大相径庭
+            链接：https://www.zhihu.com/question/63550573/answer/386511545
+            来源：知乎
+            著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+    </div>
+</div>
+
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+</html>

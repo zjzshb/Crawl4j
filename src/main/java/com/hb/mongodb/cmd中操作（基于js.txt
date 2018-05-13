@@ -1,0 +1,112 @@
+> var a = 10
+> a+100
+110
+> function max(a,b){
+... if(a>b){
+... return a}
+... else{
+... return b}
+... }
+
+
+> max(100,500)
+500
+
+
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+
+> db
+test
+
+
+> help
+        db.help()                    help on db methods
+        db.mycoll.help()             help on collection methods
+        sh.help()                    sharding helpers
+        rs.help()                    replica set helpers
+        help admin                   administrative help
+        help connect                 connecting to a db help
+        help keys                    key shortcuts
+        help misc                    misc things to know
+        help mr                      mapreduce
+
+        show dbs                     show database names
+        show collections             show collections in current database
+        show users                   show users in current database
+        show profile                 show most recent system.profile entries wit
+h time >= 1ms
+        show logs                    show the accessible logger names
+        show log [name]              prints out the last segment of log in memor
+y, 'global' is default
+        use <db_name>                set current database
+        db.foo.find()                list objects in collection foo
+        db.foo.find( { a : 1 } )     list objects in foo where a == 1
+        it                           result of the last line evaluated; use to f
+urther iterate
+        DBQuery.shellBatchSize = x   set default number of items to display on s
+hell
+        exit                         quit the mongo shell
+
+
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+
+> user hbdb
+2018-04-08T11:28:49.590+0800 E QUERY    [thread1] SyntaxError: missing ; before
+statement @(shell):1:5
+
+
+> use hbdb
+switched to db hbdb
+
+
+> db
+hbdb
+
+
+> use hbdb
+switched to db hbdb
+
+
+> var user = {"name":"zhangsan","age":20,"sex":"boy"};
+
+
+> db.users,insert(user)
+2018-04-08T13:15:31.527+0800 E QUERY    [thread1] ReferenceError: insert is not
+defined :
+@(shell):1:10
+
+
+向user集合中插入
+> db.users.insert(user)
+WriteResult({ "nInserted" : 1 })
+
+
+> db.users.find()
+{ "_id" : ObjectId("5ac9a581af244e6c9df1f0f9"), "name" : "zhangsan", "age" : 20,
+ "sex" : "boy" }
+
+
+> var user = {name:"zhangsan",age:20,sex:"boy"};
+> db.users.insert(user)
+WriteResult({ "nInserted" : 1 })
+
+
+> var user = {age:20,name:"zhangsan",sex:"boy"};
+> db.users.insert(user)
+WriteResult({ "nInserted" : 1 })
+
+> db.users.find()
+{ "_id" : ObjectId("5ac9a581af244e6c9df1f0f9"), "name" : "zhangsan", "age" : 20,
+ "sex" : "boy" }
+{ "_id" : ObjectId("5ac9a648af244e6c9df1f0fa"), "name" : "zhangsan", "age" : 20,
+ "sex" : "boy" }
+{ "_id" : ObjectId("5ac9a668af244e6c9df1f0fb"), "age" : 20, "name" : "zhangsan",
+ "sex" : "boy" }

@@ -1,0 +1,30 @@
+.navbar-default input[type="text"] {
+    background: #333;
+    border: none;
+    color: #999;
+}
+
+.navbar-default input[type="submit"] {
+    background: none;
+    border: none;
+    color: #999;
+}
+
+.navbar-default form {
+    position: relative;
+}
+
+.navbar-default .glyphicon-search {
+    position: absolute;
+    top: 27%;
+    right: 10px;
+}
+
+/*不同比例下的样式*/
+@media (min-width: 768px) {
+    .navbar-default .glyphicon-search {
+        position: absolute;
+        top: 27%;
+        right: 10px;
+    }
+}
